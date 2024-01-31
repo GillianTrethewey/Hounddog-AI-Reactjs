@@ -1,0 +1,67 @@
+@use "../../styles/partials/_variables.scss" as *;
+@use "../../styles/partials/_mixins.scss" as *;
+@use "../../styles/partials/_typography.scss" as *;
+
+.datacard-list {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 0;
+    width: 100%;
+  
+    @include tablet {
+      padding: 0 2.25rem;
+      margin-right: 2.25rem;
+    }
+  
+    @include desktop {
+      padding: 0;
+      padding-left: 7.75rem;
+    }
+  
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+
+  
+      @include desktop {
+        @include flexbox();
+        flex-direction: column;
+        margin: 0 auto;
+      }
+    }  
+  
+    &__list {
+      display: flex;
+      flex-direction: column;
+  
+      @include tablet {
+        
+      }
+  
+      @include desktop {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  
+    &__ul {
+      padding-left: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      
+    }
+
+    &__li {
+        list-style-type: none;
+        min-width: 400px;
+        max-width: 400px;
+        display: flex;
+        text-align: left;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border: 1px solid $bf-blue;
+        border-radius: 10px;
+        margin: 2rem;
+    }
+  }

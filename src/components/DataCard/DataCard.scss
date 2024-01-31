@@ -1,0 +1,25 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.card {
+  &__container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between !important;
+
+    @include desktop {
+      @include flexbox();
+      flex-direction: column;
+      margin: 0 auto;
+    }
+  }
+  &__router-link {
+    text-decoration: none;
+    color: $bf-black;
+  }
+}

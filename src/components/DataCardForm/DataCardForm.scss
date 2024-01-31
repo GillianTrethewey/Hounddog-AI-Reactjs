@@ -1,0 +1,164 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.newcard {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-bottom: 1px solid $mercury;
+
+  &__title {
+    font-size: 1.5rem;
+  }
+
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+      @include flexbox();
+      flex-direction: column;
+      margin: 0 auto;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablet {
+    margin: 0;
+    width: 100%;
+  }
+
+  @include desktop {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      margin: 0;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__photo {
+    @include profile-photo;
+    background-color: $mercury;
+    margin-top: 2rem;
+
+    @include tablet {
+      margin-top: 1.5rem;
+    }
+
+    @include desktop {
+      margin-right: 2rem;
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 650px;
+    padding-bottom: 1rem;
+  }
+
+  &__photo {
+    @include profile-photo;
+    border: 3px solid black;
+    margin-top: 2rem;
+
+    @include tablet {
+      margin-top: 1.5rem;
+    }
+
+    @include desktop {
+      margin-right: 2rem;
+    }
+  }
+
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    color: $silver;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+
+    @include tablet {
+      font-size: 0.8rem;
+      margin: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    @include desktop {
+      font-size: 0.75rem;
+    }
+  }
+
+  &__textarea {
+    background-color: $alabaster;
+    border: 1px solid $mercury;
+    border-radius: 4px;
+    height: 3rem;
+    line-height: 2rem;
+    padding-left: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: $bf-black;
+    font-family: "Avenir";
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: $bf-dk-black;
+
+    @include tablet {
+      height: 2.6rem;
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+
+    @include desktop {
+      font-size: 0.8rem;
+    }
+}
+
+    &__textarea:focus {
+      outline: 1px solid transparent;
+      border: 1px solid $bf-dk-black;
+    }
+
+    &__textarea:active {
+      border: 1px solid $bf-dk-black;
+    }
+
+    &__textarea::placeholder {
+      color: $bf-black;
+      font-family: "Avenir";
+      font-weight: 300;
+      font-size: 0.8rem;
+
+      @include tablet {
+        font-size: 1rem;
+      }
+
+      @include desktop {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
